@@ -139,5 +139,3 @@ In addition to the previoulsy mentioned commands, you can find the number of ins
 
 0x00. AirBnB clone - The console
   
-Jeremy Bedolla <1106@holbertonschool.com>\
-Geoff Zoref <1034@holbertonschool.com>
