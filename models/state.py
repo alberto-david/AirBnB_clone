@@ -1,19 +1,8 @@
 #!/usr/bin/python3
-'''
-State class
-'''
+"""A module containing the State model"""
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    '''
-    State class inherits from BaseModel
-    '''
-    name = ''
-
-
-def __init__(self, *args, **kwargs):
-    """
-    init
-    """
-    super().__init__(*args, **kwargs)
+    """Implements the State model for any state object"""
+    name = ""

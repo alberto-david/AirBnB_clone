@@ -1,27 +1,23 @@
 #!/usr/bin/python3
+"""Test suite for the State class of the models.state module"""
+import unittest
+
+from models.base_model import BaseModel
 from models.state import State
 
-from tests.test_models.test_base_model import TestBaseModel
 
+class TestState(unittest.TestCase):
+    """Test cases for the State class"""
 
-class TestState(TestBaseModel):
-    '''
-    =========================
-    User tests
-    =========================
-    '''
+    def setUp(self):
+        self.state = State()
 
-    def __init__(self, *args, **kwargs):
-        '''
-        Constructor
-        '''
-        super().__init__(*args, **kwargs)
-        self.test_class = State
-        self.test_name = "State"
+    def test_state_is_a_subclass_of_basemodel(self):
+        self.assertTrue(issubclass(type(self.state), BaseModel))
 
-    def test_state_id(self):
-        '''
-        Attribute test
-        '''
-        state = self.test_class()
-        self.assertIsInstance(state.name, str)
+    def test_attr_is_a_class_attr(self):
+        self.assertTrue(hasattr(self.state, "name"))
+
+    def test_class_attrs(self):
+        self.assertIs(type(self.state.name), str)
+        self.assertFalse(bool(self.state.name))

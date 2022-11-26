@@ -1,20 +1,9 @@
 #!/usr/bin/python3
-'''
-City class
-'''
+"""Contains the City model"""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    '''
-    State class inherits from BaseModel
-    '''
-    state_id = ''
-    name = ''
-
-
-def __init__(self, *args, **kwargs):
-    """
-    init
-    """
-    super().__init__(*args, **kwargs)
+    """Implements the City class"""
+    state_id = ""
+    name = ""
